@@ -22,7 +22,7 @@ pod 'SugarSwiftExtension'
 
 ## Author
 
-yu.xieyu, yu.xieyu@nvrchina.com.cn
+yu.zhang, 776210576@qq.com
 
 ## License
 
