@@ -1,0 +1,32 @@
+{
+  "name": "SugarSwiftExtension",
+  "version": "0.1.0",
+  "summary": "SugarSwiftExtension is easy to use swift Kit",
+  "description": "this kit has sub pod base and ui extension,you can select to install.",
+  "homepage": "https://github.com/yu.xieyu/SugarSwiftExtension",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ZY": "776210576@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/yu.xieyu/SugarSwiftExtension.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SugarSwiftExtension/Classes/**/*",
+  "subspecs": [
+    {
+      "name": "BaseExtension",
+      "source_files": "SugarSwiftExtension/Classes/BaseExtension"
+    },
+    {
+      "name": "UIExtension",
+      "source_files": "SugarSwiftExtension/Classes/UIExtension"
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SugarSwiftExtension'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SugarSwiftExtension.'
+  s.summary          = 'SugarSwiftExtension is easy to use swift Kit'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  this kit has sub pod base and ui extension,you can select to install.
+  DESC
 
   s.homepage         = 'https://github.com/yu.xieyu/SugarSwiftExtension'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'yu.xieyu' => 'yu.xieyu@nvrchina.com.cn' }
+  s.author           = { 'ZY' => '776210576@qq.com' }
   s.source           = { :git => 'https://github.com/yu.xieyu/SugarSwiftExtension.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -32,11 +32,12 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'SugarSwiftExtension/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SugarSwiftExtension' => ['SugarSwiftExtension/Assets/*.png']
-  # }
+  s.subspec 'BaseExtension' do |ss|
+    ss.source_files = 'SugarSwiftExtension/Classes/BaseExtension'
+  end
+  
+  s.subspec 'UIExtension' do |ss|
+    ss.source_files = 'SugarSwiftExtension/Classes/UIExtension'
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

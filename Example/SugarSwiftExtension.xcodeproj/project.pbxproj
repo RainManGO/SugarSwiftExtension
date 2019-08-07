@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04DF4A3810D9273B99D41988 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		04DF4A3810D9273B99D41988 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		04F710B86DD3603C6284BC91 /* Pods_SugarSwiftExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarSwiftExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA28756DD33A51315B3F844 /* Pods-SugarSwiftExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarSwiftExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-SugarSwiftExtension_Example/Pods-SugarSwiftExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SugarSwiftExtension_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugarSwiftExtension_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,8 +44,8 @@
 		8B1EEFE4D42AAC72703A8734 /* Pods-SugarSwiftExtension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarSwiftExtension_Example.debug.xcconfig"; path = "Target Support Files/Pods-SugarSwiftExtension_Example/Pods-SugarSwiftExtension_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8CCE9E5C762024EC68FE6186 /* Pods-SugarSwiftExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarSwiftExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SugarSwiftExtension_Tests/Pods-SugarSwiftExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9535BA3972BD423F1E0B713E /* Pods-SugarSwiftExtension_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarSwiftExtension_Tests.release.xcconfig"; path = "Target Support Files/Pods-SugarSwiftExtension_Tests/Pods-SugarSwiftExtension_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9DF179E28A307CAE00539809 /* SugarSwiftExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SugarSwiftExtension.podspec; path = ../SugarSwiftExtension.podspec; sourceTree = "<group>"; };
-		9FD6F0671B4CF52706CCA64C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9DF179E28A307CAE00539809 /* SugarSwiftExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SugarSwiftExtension.podspec; path = ../SugarSwiftExtension.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FD6F0671B4CF52706CCA64C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BECEF6BEF1A06232F9084409 /* Pods_SugarSwiftExtension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarSwiftExtension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,6 @@
 				8CCE9E5C762024EC68FE6186 /* Pods-SugarSwiftExtension_Tests.debug.xcconfig */,
 				9535BA3972BD423F1E0B713E /* Pods-SugarSwiftExtension_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,7 +170,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				CA9935853813115D3F6564C5 /* [CP] Embed Pods Frameworks */,
+				BA5FC9B096F2705D434487BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,6 +306,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BA5FC9B096F2705D434487BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SugarSwiftExtension_Example/Pods-SugarSwiftExtension_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SugarSwiftExtension/SugarSwiftExtension.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SugarSwiftExtension.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SugarSwiftExtension_Example/Pods-SugarSwiftExtension_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C73FF0C6D4EA83A1B613C71F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,28 +348,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SugarSwiftExtension_Tests/Pods-SugarSwiftExtension_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CA9935853813115D3F6564C5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SugarSwiftExtension_Example/Pods-SugarSwiftExtension_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SugarSwiftExtension/SugarSwiftExtension.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SugarSwiftExtension.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SugarSwiftExtension_Example/Pods-SugarSwiftExtension_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -506,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SugarSwiftExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -521,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SugarSwiftExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

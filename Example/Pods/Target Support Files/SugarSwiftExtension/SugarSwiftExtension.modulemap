@@ -1,0 +1,6 @@
+framework module SugarSwiftExtension {
+  umbrella header "SugarSwiftExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

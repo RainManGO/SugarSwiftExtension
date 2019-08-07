@@ -25,4 +25,12 @@ class Tests: XCTestCase {
         }
     }
     
+    func testIntRound(){
+        print(1234.toRound)
+        XCTAssertTrue(0.toRound == 0, "bingo")
+        XCTAssertTrue(3.toRound == 3, "bingo")
+        XCTAssertTrue(123.toRound == 120, "bingo")
+        XCTAssertTrue(1234.toRound == 1230, "bingo")
+    }
+    
 }

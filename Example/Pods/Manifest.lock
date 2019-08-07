@@ -1,0 +1,31 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - SugarSwiftExtension (0.1.0):
+    - SugarSwiftExtension/BaseExtension (= 0.1.0)
+    - SugarSwiftExtension/UIExtension (= 0.1.0)
+  - SugarSwiftExtension/BaseExtension (0.1.0)
+  - SugarSwiftExtension/UIExtension (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
+  - SugarSwiftExtension (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  SugarSwiftExtension:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  SugarSwiftExtension: 60a074754a7f96ab8ca67dcf9f8bd7e088e1d270
+
+PODFILE CHECKSUM: eac513035f1b1d2879e405826355eda2d0ba71ff
+
+COCOAPODS: 1.6.1
