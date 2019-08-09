@@ -33,8 +33,9 @@ extension Int{
     ///  Converts integer value to Int64.
     public var toInt64: Int64 { return Int64(self) }
     
+    
     ///  round integer:last digit round
-    public var toRound: Int {
+    public var rounded: Int {
         guard let lastDigit = self.digitArray.last else { return self }
         if self.digits <= 1 { return self }
         var newDigits = self.digitArray
@@ -47,7 +48,7 @@ extension Int{
     }
     
     ///  round integer:last digit floor
-    public var toFloor: Int {
+    public var floored: Int {
         if self.digits <= 1 { return self }
         var newDigits = self.digitArray
         newDigits[self.digits - 1] = 0
