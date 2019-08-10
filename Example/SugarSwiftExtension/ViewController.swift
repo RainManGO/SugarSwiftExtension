@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         dateFormatter.timeStyle = .none
         print(dateFormatter.string(from: date))
         
+        
     }
 
     override func didReceiveMemoryWarning() {

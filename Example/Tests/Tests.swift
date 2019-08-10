@@ -56,4 +56,8 @@ class Tests: XCTestCase {
         XCTAssertTrue(result == ["1":1], "error dic intersection")
     }
     
+    func testSugar() {
+        
+    }
+    
 }

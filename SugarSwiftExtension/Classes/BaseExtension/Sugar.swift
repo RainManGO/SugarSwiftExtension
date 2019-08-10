@@ -1,8 +1,9 @@
 //
 //  Sugar.swift
-//  SugarSwiftExtension
+//  SugarSwiftExtensions
 //
-//  Created by mac on 2019/8/8.
+//  Created by ZY on 19/08/07.
+//  Copyright (c) 2019 ZY. All rights reserved.
 //
 
 import Foundation

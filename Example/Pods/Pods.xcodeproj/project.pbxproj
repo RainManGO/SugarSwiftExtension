@@ -40,6 +40,8 @@
 		C12523F022FD60B70001796E /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12523EF22FD60B70001796E /* CGRectExtension.swift */; };
 		C12523F222FD61CD0001796E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12523F122FD61CD0001796E /* ColorExtension.swift */; };
 		C12523F422FD6BB30001796E /* Bundle+LanguageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12523F322FD6BB30001796E /* Bundle+LanguageExtension.swift */; };
+		C12523F622FD723E0001796E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12523F522FD723E0001796E /* UIViewExtension.swift */; };
+		C12523F822FD78D30001796E /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12523F722FD78D30001796E /* CGFloatExtension.swift */; };
 		C1A1CFEFA753302D18BAA680DFF324D7 /* DecimalsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685555CDB10694BB23D37447D2815D40 /* DecimalsExtension.swift */; };
 		C3A7E8E43372CF9D6E270F2B4F09B291 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F562A950BC3B0D9DB87C857D478D7 /* FBSnapshotTestController.m */; };
 		D82EA5AE72E2CF07896033CEE462B900 /* Pods-SugarSwiftExtension_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9C4BED175BC7DD404181DEF892A8C5 /* Pods-SugarSwiftExtension_Example-dummy.m */; };
@@ -126,6 +128,8 @@
 		C12523EF22FD60B70001796E /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		C12523F122FD61CD0001796E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		C12523F322FD6BB30001796E /* Bundle+LanguageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+LanguageExtension.swift"; sourceTree = "<group>"; };
+		C12523F522FD723E0001796E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		C12523F722FD78D30001796E /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		C3FB5D637CA8F60B2B16F9375DFCA3FE /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		C867AE3EEF3D11873FDE1BCFAF6C2188 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C92262C2D5C38CBC48202FF95F6FA5E1 /* Pods-SugarSwiftExtension_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SugarSwiftExtension_Tests.modulemap"; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				64ACD3A9E7F59DCD3D1DB3C4DECAA6F9 /* ReplaceMe.swift */,
+				C12523F522FD723E0001796E /* UIViewExtension.swift */,
 			);
 			name = UIExtension;
 			path = SugarSwiftExtension/Classes/UIExtension;
@@ -336,9 +341,9 @@
 			isa = PBXGroup;
 			children = (
 				F044A433A753F338001D6FFD4D341042 /* BaseExtension */,
+				75296D92CD2456F8B29639B8F69A2515 /* UIExtension */,
 				074BF23B01B8A25EB561CA59A9D5B641 /* Pod */,
 				BBCBDC4CF406F7285C8F423E22116AF8 /* Support Files */,
-				75296D92CD2456F8B29639B8F69A2515 /* UIExtension */,
 			);
 			name = SugarSwiftExtension;
 			path = ../..;
@@ -389,6 +394,7 @@
 				FF1B1EAEA556AA7A8F64086632E5CD11 /* ArrayExtension.swift */,
 				C12523F122FD61CD0001796E /* ColorExtension.swift */,
 				C12523EF22FD60B70001796E /* CGRectExtension.swift */,
+				C12523F722FD78D30001796E /* CGFloatExtension.swift */,
 				685555CDB10694BB23D37447D2815D40 /* DecimalsExtension.swift */,
 				2F20EE72139ED529CB7017CE58A01CC4 /* DictionaryExtension.swift */,
 				C12523ED22FD464D0001796E /* DateExtension.swift */,
@@ -619,6 +625,8 @@
 				8A6F76352C63276D3C993BB5E7285162 /* ReplaceMe.swift in Sources */,
 				063B0D7994C1C214C87691742DF32531 /* StringExtension.swift in Sources */,
 				2EC06CF478FDB3F0F7D5BCDD8C687EB7 /* Sugar.swift in Sources */,
+				C12523F622FD723E0001796E /* UIViewExtension.swift in Sources */,
+				C12523F822FD78D30001796E /* CGFloatExtension.swift in Sources */,
 				C12523F222FD61CD0001796E /* ColorExtension.swift in Sources */,
 				029BC603380EEA7847411398D4434D7D /* SugarSwiftExtension-dummy.m in Sources */,
 				C12523F422FD6BB30001796E /* Bundle+LanguageExtension.swift in Sources */,
