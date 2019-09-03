@@ -177,7 +177,7 @@ extension UIView {
     /// Centers view in superview horizontally
     public func centerXInSuperView() {
         guard let parentView = superview else {
-            assertionFailure("EZSwiftExtensions Error: The view \(self) doesn't have a superview")
+            assertionFailure("SugarSwiftExtensions Error: The view \(self) doesn't have a superview")
             return
         }
         
@@ -187,7 +187,7 @@ extension UIView {
     /// Centers view in superview vertically
     public func centerYInSuperView() {
         guard let parentView = superview else {
-            assertionFailure("EZSwiftExtensions Error: The view \(self) doesn't have a superview")
+            assertionFailure("SugarSwiftExtensions Error: The view \(self) doesn't have a superview")
             return
         }
         
@@ -203,7 +203,7 @@ extension UIView {
 
 // MARK: Transform Extensions
 extension UIView {
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func setRotationX(_ x: CGFloat) {
         var transform = CATransform3DIdentity
         transform.m34 = 1.0 / -1000.0
@@ -211,7 +211,7 @@ extension UIView {
         self.layer.transform = transform
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func setRotationY(_ y: CGFloat) {
         var transform = CATransform3DIdentity
         transform.m34 = 1.0 / -1000.0
@@ -219,7 +219,7 @@ extension UIView {
         self.layer.transform = transform
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func setRotationZ(_ z: CGFloat) {
         var transform = CATransform3DIdentity
         transform.m34 = 1.0 / -1000.0
@@ -227,7 +227,7 @@ extension UIView {
         self.layer.transform = transform
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func setRotation(x: CGFloat, y: CGFloat, z: CGFloat) {
         var transform = CATransform3DIdentity
         transform.m34 = 1.0 / -1000.0
@@ -237,7 +237,7 @@ extension UIView {
         self.layer.transform = transform
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func setScale(x: CGFloat, y: CGFloat) {
         var transform = CATransform3DIdentity
         transform.m34 = 1.0 / -1000.0
@@ -248,13 +248,13 @@ extension UIView {
 
 // MARK: Layer Extensions
 extension UIView {
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func setCornerRadius(radius: CGFloat) {
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
     }
     //TODO: add this to readme
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func addShadow(offset: CGSize, radius: CGFloat, color: UIColor, opacity: Float, cornerRadius: CGFloat? = nil) {
         self.layer.shadowOffset = offset
         self.layer.shadowRadius = radius
@@ -265,40 +265,40 @@ extension UIView {
         }
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func addBorder(width: CGFloat, color: UIColor) {
         layer.borderWidth = width
         layer.borderColor = color.cgColor
         layer.masksToBounds = true
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func addBorderTop(size: CGFloat, color: UIColor) {
         addBorderUtility(x: 0, y: 0, width: frame.width, height: size, color: color)
     }
     
     //TODO: add to readme
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func addBorderTopWithPadding(size: CGFloat, color: UIColor, padding: CGFloat) {
         addBorderUtility(x: padding, y: 0, width: frame.width - padding*2, height: size, color: color)
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func addBorderBottom(size: CGFloat, color: UIColor) {
         addBorderUtility(x: 0, y: frame.height - size, width: frame.width, height: size, color: color)
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func addBorderLeft(size: CGFloat, color: UIColor) {
         addBorderUtility(x: 0, y: 0, width: size, height: frame.height, color: color)
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func addBorderRight(size: CGFloat, color: UIColor) {
         addBorderUtility(x: frame.width - size, y: 0, width: size, height: frame.height, color: color)
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     fileprivate func addBorderUtility(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, color: UIColor) {
         let border = CALayer()
         border.backgroundColor = color.cgColor
@@ -306,7 +306,7 @@ extension UIView {
         layer.addSublayer(border)
     }
     //TODO: add this to readme
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func drawCircle(fillColor: UIColor, strokeColor: UIColor, strokeWidth: CGFloat) {
         let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: self.w, height: self.w), cornerRadius: self.w/2)
         let shapeLayer = CAShapeLayer()
@@ -317,7 +317,7 @@ extension UIView {
         self.layer.addSublayer(shapeLayer)
     }
     //TODO: add this to readme
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func drawStroke(width: CGFloat, color: UIColor) {
         let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: self.w, height: self.w), cornerRadius: self.w/2)
         let shapeLayer = CAShapeLayer ()
@@ -336,35 +336,35 @@ private let UIViewAnimationSpringVelocity: CGFloat = 0.5
 //TODO: add this to readme
 // MARK: Animation Extensions
 extension UIView {
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func spring(animations: @escaping (() -> Void), completion: ((Bool) -> Void)? = nil) {
         spring(duration: UIViewAnimationDuration, animations: animations, completion: completion)
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func spring(duration: TimeInterval, animations: @escaping (() -> Void), completion: ((Bool) -> Void)? = nil) {
         UIView.animate(
             withDuration: UIViewAnimationDuration,
             delay: 0,
             usingSpringWithDamping: UIViewAnimationSpringDamping,
             initialSpringVelocity: UIViewAnimationSpringVelocity,
-            options: UIViewAnimationOptions.allowAnimatedContent,
+            options: UIView.AnimationOptions.allowAnimatedContent,
             animations: animations,
             completion: completion
         )
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func animate(duration: TimeInterval, animations: @escaping (() -> Void), completion: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: duration, animations: animations, completion: completion)
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func animate(animations: @escaping (() -> Void), completion: ((Bool) -> Void)? = nil) {
         animate(duration: UIViewAnimationDuration, animations: animations, completion: completion)
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func pop() {
         setScale(x: 1.1, y: 1.1)
         spring(duration: 0.2, animations: { [unowned self] () -> Void in
@@ -372,7 +372,7 @@ extension UIView {
         })
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func popBig() {
         setScale(x: 1.25, y: 1.25)
         spring(duration: 0.2, animations: { [unowned self] () -> Void in
@@ -392,128 +392,13 @@ extension UIView {
 //TODO: add this to readme
 // MARK: Render Extensions
 extension UIView {
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func toImage () -> UIImage {
         UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
         drawHierarchy(in: bounds, afterScreenUpdates: false)
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return img!
-    }
-}
-
-// MARK: Gesture Extensions
-extension UIView {
-    /// http://stackoverflow.com/questions/4660371/how-to-add-a-touch-event-to-a-uiview/32182866#32182866
-    /// EZSwiftExtensions
-    public func addTapGesture(tapNumber: Int = 1, target: AnyObject, action: Selector) {
-        let tap = UITapGestureRecognizer(target: target, action: action)
-        tap.numberOfTapsRequired = tapNumber
-        addGestureRecognizer(tap)
-        isUserInteractionEnabled = true
-    }
-    
-    /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addTapGesture(tapNumber: Int = 1, action: ((UITapGestureRecognizer) -> Void)?) {
-        let tap = BlockTap(tapCount: tapNumber, fingerCount: 1, action: action)
-        addGestureRecognizer(tap)
-        isUserInteractionEnabled = true
-    }
-    
-    /// EZSwiftExtensions
-    public func addSwipeGesture(direction: UISwipeGestureRecognizerDirection, numberOfTouches: Int = 1, target: AnyObject, action: Selector) {
-        let swipe = UISwipeGestureRecognizer(target: target, action: action)
-        swipe.direction = direction
-        
-        #if os(iOS)
-        
-        swipe.numberOfTouchesRequired = numberOfTouches
-        
-        #endif
-        
-        addGestureRecognizer(swipe)
-        isUserInteractionEnabled = true
-    }
-    
-    /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addSwipeGesture(direction: UISwipeGestureRecognizerDirection, numberOfTouches: Int = 1, action: ((UISwipeGestureRecognizer) -> Void)?) {
-        let swipe = BlockSwipe(direction: direction, fingerCount: numberOfTouches, action: action)
-        addGestureRecognizer(swipe)
-        isUserInteractionEnabled = true
-    }
-    
-    /// EZSwiftExtensions
-    public func addPanGesture(target: AnyObject, action: Selector) {
-        let pan = UIPanGestureRecognizer(target: target, action: action)
-        addGestureRecognizer(pan)
-        isUserInteractionEnabled = true
-    }
-    
-    /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addPanGesture(action: ((UIPanGestureRecognizer) -> Void)?) {
-        let pan = BlockPan(action: action)
-        addGestureRecognizer(pan)
-        isUserInteractionEnabled = true
-    }
-    
-    #if os(iOS)
-    
-    /// EZSwiftExtensions
-    public func addPinchGesture(target: AnyObject, action: Selector) {
-        let pinch = UIPinchGestureRecognizer(target: target, action: action)
-        addGestureRecognizer(pinch)
-        isUserInteractionEnabled = true
-    }
-    
-    #endif
-    
-    #if os(iOS)
-    
-    /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addPinchGesture(action: ((UIPinchGestureRecognizer) -> Void)?) {
-        let pinch = BlockPinch(action: action)
-        addGestureRecognizer(pinch)
-        isUserInteractionEnabled = true
-    }
-    
-    #endif
-    
-    /// EZSwiftExtensions
-    public func addLongPressGesture(target: AnyObject, action: Selector) {
-        let longPress = UILongPressGestureRecognizer(target: target, action: action)
-        addGestureRecognizer(longPress)
-        isUserInteractionEnabled = true
-    }
-    
-    /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addLongPressGesture(action: ((UILongPressGestureRecognizer) -> Void)?) {
-        let longPress = BlockLongPress(action: action)
-        addGestureRecognizer(longPress)
-        isUserInteractionEnabled = true
-    }
-}
-
-//TODO: add to readme
-extension UIView {
-    /// EZSwiftExtensions [UIRectCorner.TopLeft, UIRectCorner.TopRight]
-    public func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        self.layer.mask = mask
-    }
-    
-    /// EZSwiftExtensions - Mask square/rectangle UIView with a circular/capsule cover, with a border of desired color and width around it
-    public func roundView(withBorderColor color: UIColor? = nil, withBorderWidth width: CGFloat? = nil) {
-        self.setCornerRadius(radius: min(self.frame.size.height, self.frame.size.width) / 2)
-        self.layer.borderWidth = width ?? 0
-        self.layer.borderColor = color?.cgColor ?? UIColor.clear.cgColor
-    }
-    
-    /// EZSwiftExtensions - Remove all masking around UIView
-    public func nakedView() {
-        self.layer.mask = nil
-        self.layer.borderWidth = 0
     }
 }
 
@@ -553,7 +438,7 @@ extension UIView {
         fadeTo(1.0, duration: duration, delay: delay, completion: completion)
     }
     
-    /// EZSwiftExtensions
+    /// SugarSwiftExtensions
     public func fadeOut(_ duration: TimeInterval? = UIViewDefaultFadeDuration, delay: TimeInterval? = 0.0, completion: ((Bool) -> Void)? = nil) {
         fadeTo(0.0, duration: duration, delay: delay, completion: completion)
     }
